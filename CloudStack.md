@@ -8,3 +8,15 @@ http://cloudstack.apt-get.eu/， 该URL  包含了CloudStack 4.0开始的所有�
 * rpm安装包目录： rhel
 * 系统模板目录：systemvm
 * ubuntu安装包目录： ubuntu
+
+### 2. CloudStack Debug
+
+*debug management
+  Add the following line in the file  /etc/cloudstack/management/tomcat6.conf
+  CATALINA_OPTS="Xdebug Xrunjwdp:transport=dt_socket,address=8787,server=y,suspend=n"
+* debug kvm-agent
+  Edit /etc/init.d/cloudstack-agent file
+  DEBUG="Xdebug Xrunjwdp:transport=dt_socket,address=8787,server=y,suspend=n"
+  JSVS -c "$CLASSPATH" 
+  JSVC "${DEBUG}" -c "$CLASSPATH"
+*debug ssvm and cpvm Agent
