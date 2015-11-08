@@ -54,3 +54,4 @@ EOF
 #### 3)、使用< 重定向脚本 
 	mysql -uusername -ppasswd < test.sql
 
+### 配置 log-bin
