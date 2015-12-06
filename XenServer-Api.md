@@ -26,3 +26,15 @@
 			session.login_with_password(user,password)
 
 	```
+
+### 查看 XenAPI 的 远程调用方法
+```
+	import xmlrpclib
+	
+	server = xmlrpclib.ServerProxy(http://ip)
+	methods = server.system.methods()
+	with open('xen-api.txt', 'w') as f:
+		for m in methods:
+			f.write( m + '\n' )
+```
+这样就把XenAPI的方法写入文件： xen-api.txt 中
