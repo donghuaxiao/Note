@@ -75,3 +75,21 @@ Ansible 没有Agent, 不用再管理的主机上安装Agent, 直接通过ssh 进
 ```
   ansible kvmnode -m yum -a "name=package state=latest"
 ```
+
+
+####4. Service 模块
+Service 模块用来启动， 停止， 重启 各种服务和启用服务开机自启动
+参数：
+- name : name of service
+- state: started | stopped | restarted | reloaded(启动 | 停止 | 重启 | 重新加载)
+- enabled: yes|no ( 开机自动|开机不启动) (chkconfig servicename on | off)
+
+playbook example
+```
+  service: name=libvirtd state=started
+```
+
+CLI:
+```
+  ansible kvmnode -m service -a "name=libvirtd state=started"
+```
