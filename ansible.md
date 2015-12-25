@@ -47,22 +47,30 @@ Ansible 没有Agent, 不用再管理的主机上安装Agent, 直接通过ssh 进
   ```
 
 ### 4. 基本操作
-
-1. 被管理主机的连通性检测
-
+####1. 被管理主机的连通性检测
 ```
   ansible kvmnode -m ping
 ```
 
-2. 执行shell 命令
-
+####2. 执行shell 命令
+使用 command 模块
 ```
   ansible kvmnode -m command -a "shell command"
 ```
 -m command : 表示使用command 模块
 -a : 表示使用参数
-"" ： 中的就是要执行的命令
-3. 安装 软件
+"shell command" ： 中的就是要执行的命令
+
+使用 shell 模块： 执行命令， 执行 shell 脚本,
+```
+  ansible kvmnode -m shell -a "shell script | shell command"
+```
+
+注意： command 模块只能执行单个命令， 不能执行多个使用管道连接起来的命令。比如：
+```
+  rpm -qa | grep httpd
+```
+####3. 安装 软件
 
 ```
   ansible kvmnode -m yum -a "name=package state=latest"
