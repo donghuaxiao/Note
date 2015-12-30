@@ -41,3 +41,17 @@
       
   mapper( User, user)
 ```
+
+### 数据连接URL
+
+#### 1. Mysql 连接URL
+```
+  mysql://username:password@host:port/database?charset=utf8
+```
+
+mysql://root:cloudstack@localhost:3306/test?charset=utf8
+
+### 2. PostgreSql 连接URL
+```
+  postgresql://username:password@host:port/database?charset=utf8
+```
