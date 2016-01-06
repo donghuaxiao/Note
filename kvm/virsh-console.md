@@ -16,7 +16,7 @@
 #### 3. /etc/grub.conf文件中为内核添加参数
 
 ```
-  console=tty
+  console=ttyS0
 ```
 
 #### 4. reboot 虚拟机
