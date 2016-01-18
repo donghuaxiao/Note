@@ -60,10 +60,12 @@ TAP(network TAP) 模拟一个 link layer 设备，工作在数据链路层， �
 
 Afater the program is exit , the TUN/TAP device Create by the program is delete.
 
-make a TUN/TAP device persistent 
+make a TUN/TAP device persistent :
+
 ioctl(fd, TUNSETPERSISTENT, 1)
 
 make a TUN/TAP device unpersistent:
+
 ioctl(fd, TUNSETPERSISTENT, 0)
 
 ###  命令行创建 TUN/TAP 设备(CentOS 7)
