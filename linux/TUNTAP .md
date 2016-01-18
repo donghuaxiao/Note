@@ -58,7 +58,15 @@ TAP(network TAP) 模拟一个 link layer 设备，工作在数据链路层， �
 }
 ```
 
-###  命令行创建 TUN/TAP 设备
+Afater the program is exit , the TUN/TAP device Create by the program is delete.
+
+make a TUN/TAP device persistent 
+ioctl(fd, TUNSETPERSISTENT, 1)
+
+make a TUN/TAP device unpersistent:
+ioctl(fd, TUNSETPERSISTENT, 0)
+
+###  命令行创建 TUN/TAP 设备(CentOS 7)
 ```
 Usage: ip tuntap { add | del } [ dev PHYS_DEV ] 
           [ mode { tun | tap } ] [ user USER ] [ group GROUP ]
@@ -80,3 +88,32 @@ Where: USER  := { STRING | NUMBER }
   ip tuntap del dev tun0 mode tun
 ```
 
+### CentOS6 create TUN/TAP Device by tunctl
+
+#### 1. install tunctl software
+```
+ yum install tunctl
+```
+
+#### 2.  tunctl usage 
+```
+ tunctl options [-u owner] [-t devicename]
+ tunctl -d devicename
+ 
+ -t ： device name
+ -p : create a tap device
+ -n : create a tun device
+ -u : username
+ -g : group name
+ -d : delete tun/tap device
+ 
+ eg: create a tap device:
+ tunctl -p -t tap0 -u root
+ delete a tap device
+ tunctl -d tap0 
+ 
+ create a tun device
+ tunctl -n -t tun0
+ delete a tun deivce:
+ tunctl -d tun0
+```
