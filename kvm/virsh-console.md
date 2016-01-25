@@ -22,6 +22,7 @@
 
 #### 4. reboot 虚拟机
 
+
 ###  Guest of CentOS7 access text Console using virsh console Command
 run the following command, and then reboot the guest virtual machine.
 ```
