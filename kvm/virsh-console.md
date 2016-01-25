@@ -1,6 +1,6 @@
-## 使用 virsh console 连接 VM
+# 使用 virsh console 连接 VM
 
-###  连接 CentOS6 虚拟机  
+##  连接 CentOS6 虚拟机  
 要使用virsh console domainID 从 KVM主机连接Linux虚拟机控制台， 需要在虚拟机中进行如下配置：
 
 #### 1. 添加 tty 到 /etc/securetty
@@ -23,7 +23,7 @@
 #### 4. reboot 虚拟机
 
 
-###  Guest of CentOS7 access text Console using virsh console Command
+## Guest of CentOS7 access text Console using virsh console Command
 run the following command, and then reboot the guest virtual machine.
 ```
   grubby --update-kernel=ALL --args="console=ttyS0"
