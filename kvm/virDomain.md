@@ -19,7 +19,8 @@
   domain.UUID(): 获取虚拟机的UUID
   domain.UUIDString(): 获取虚拟机的 UUID 字符串
   domain.state(): 获取虚拟机的状态, 返回一个元组(5,0) state[0] 时虚拟机状态
-  domaininfo = domain.info() : 返回一个元组[ time, maxmemory, memory, vcpu, state ], 返回[] 后，使用 id 访问, memory 的单位是KB
+  domaininfo = domain.info() : 返回一个元组[ time, maxmemory, memory, vcpu, state ], 
+  返回[] 后，使用 id 访问, memory 的单位是KB
   domaininfo[1] 是 maxmemory
   domaininfo[2] 是 memory
   domaininfo[3] 是 vcpu
@@ -38,4 +39,13 @@
   libvirt.VIR_DOMAIN_EVENT_PMSUSPENDED	= 	7
   libvirt.VIR_DOMAIN_EVENT_CRASHED	= 	8
   libvirt.VIR_DOMAIN_EVENT_LAST	= 	9
+```
+### 4. 管理虚拟机的生命周期:
+```
+  1. 启动虚拟机:
+   domain.create()
+  2. 停止虚拟机：
+  3. 重启虚拟机
+  4. suspend
+  5. resume
 ```
