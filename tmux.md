@@ -28,4 +28,4 @@ c+a + <-: 分屏分割线 <---- 移动
  . 退出 session, detach session
     Ctrl+a d 
  . attach 指定 session
-  tmux session-num
+  tmux a -t session-num
