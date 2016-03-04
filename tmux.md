@@ -21,3 +21,11 @@ c+a %  垂直分屏
 c+a+-> (同时按下 Ctrl a, ->), 使分屏分割线 --> 移动
 
 c+a + <-: 分屏分割线 <---- 移动
+
+### 3 tmux session 管理
+ . 查看session
+    tmux ls
+ . 退出 session, detach session
+    Ctrl+a d 
+ . attach 指定 session
+  tmux session-num
