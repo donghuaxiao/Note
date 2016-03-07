@@ -15,4 +15,25 @@
 
 ```
 
-### 2. 
+### 2. flask 获取参数
+
+
+```
+   获取post/PUT 数据:
+   request.form.get( field_name ) 不要使用 request.form[ field_name ], 当 field_name 不存在时， 
+   request.form[ field_name ] 会抛出异常
+   
+   获取 get 请求数据：
+   request.args.get( field_name )
+   
+   获取 文件上传数据：
+   request.files.get( file_field )
+   
+   request.values 保存 POST, GET 的数据
+   
+   request.data 保存不能处理的 mimetype 的数据， 以字符串保存
+   
+   path : 保存请求的 url
+   
+   如果时数组： 使用 getlist( field_name )
+```
