@@ -5,8 +5,8 @@
   配置文件路径： ~/.tmux.conf
   
   修改默认的Ctrl + b 为 Ctrl + a
-  set-option -g prefix C+a
-  unbind C+b
+  set-option -g prefix C-a
+  unbind C-b
   
   加载配置文件
   tmux source-file ~/.tmux.conf
