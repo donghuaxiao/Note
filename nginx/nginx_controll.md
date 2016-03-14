@@ -52,4 +52,15 @@ shutdown nginx by force:
   /usr/local/nginx/sbin/nginx
 ```
 
+### 4. 使用 nginx -s signal 来控制nginx 
+```
+  nginx -s signal
+  
+  signal:
+  stop  : fast shutdown
+  quit  : graceful shutdown
+  reload: reload nginx configuration
+  reopen: reopen the log file
+  
+```
 
