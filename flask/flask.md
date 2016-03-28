@@ -37,3 +37,20 @@
    
    如果时数组： 使用 getlist( field_name )
 ```
+
+### 3. wtforms
+
+class LoginForm(Form):
+   username = StringField("User Name")
+   
+f = LoginForm()
+
+f.username.label === > <label for="username">User Name</label>
+ username ===> 字段的名称
+ "User Name" ===> label 的名称
+ 
+ f.username ===> <input id="username" name="username" type="text" value="">
+ 
+ f.username.label.txt  ===> "User Name"
+ f.username.widget.input_type  === > text
+ f.username.type ====> StringField
