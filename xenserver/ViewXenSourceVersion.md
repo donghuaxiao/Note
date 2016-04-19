@@ -1,0 +1,36 @@
+# 查看XenServer 的版本信息
+
+### 1. 使用 uname 查看 XenServer 系统的信息
+```
+  uname -a
+````
+
+### 2. cat /etc/xensource-inventory
+```
+  cat /etc/xensource-inventory
+  
+BUILD_NUMBER='90233c'
+PLATFORM_VERSION='1.9.0'
+DOM0_VCPUS='1'
+INSTALLATION_UUID='b6ab4eef-5ff6-4595-99f7-2e71a1e5eff4'
+LINUX_KABI_VERSION='3.10.0+2'
+MANAGEMENT_ADDRESS_TYPE='IPv4'
+PRODUCT_VERSION_TEXT_SHORT='6.5'
+BRAND_CONSOLE='XenCenter'
+PRIMARY_DISK='/dev/sda'
+PRODUCT_BRAND='XenServer'
+INSTALLATION_DATE='2016-04-15 06:19:53.845492'
+PLATFORM_NAME='XCP'
+COMPANY_NAME_SHORT='Citrix'
+PRODUCT_VERSION_TEXT='6.5'
+BACKUP_PARTITION='/dev/sda2'
+PRODUCT_VERSION='6.5.0'
+XEN_VERSION='4.4.1'
+KERNEL_VERSION='3.10.41'
+MANAGEMENT_INTERFACE='xenbr0'
+DOM0_MEM='752'
+COMPANY_NAME='Citrix Systems, Inc.'
+PRODUCT_NAME='xenenterprise'
+CONTROL_DOMAIN_UUID='4327f46f-d5c9-4ef4-800b-61acf74b790c'
+
+```
