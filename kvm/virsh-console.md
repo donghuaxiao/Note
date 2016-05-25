@@ -12,13 +12,14 @@
 ```
 
 #### 2. 配置 inittab
-修改 grub.conf 让内核把输出定向至 ttyS0
+在inittab里加一个ttyS0在系统启动时会生成一个ttyS0来接收内核的数据
+
 ```
   echo "S0:12345:respawn:/sbin/agetty ttyS0 115200" >> /etc/inittab
 ```
 
 #### 3. /etc/grub.conf文件中为内核添加参数
-在inittab里加一个ttyS0在系统启动时会生成一个ttyS0来接收内核的数据
+修改 grub.conf 让内核把输出定向至 ttyS0
 ```
   console=ttyS0
 ```
