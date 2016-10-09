@@ -29,3 +29,11 @@ c+a + <-: 分屏分割线 <---- 移动
     Ctrl+a d 
  . attach 指定 session
   tmux a -t session-num
+
+### 4. tmux 关闭windows 重命名
+  在tmux 中， window 重命名默认是开启的， 因此当我们给一个window 重命名后， 一操作该window , 该窗口的名称又变成以前一样。要保持命名后的window 名称不变，要关闭 window 重命令
+  
+  在 ~/.tmux.conf 中添加
+```
+  set-option -g window-rename off
+```
