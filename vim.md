@@ -20,3 +20,4 @@ imap sout System.out.println();
  ```vim
  map <F4> :w<CR> :!python %<CR>
  ```
+ :w 是保存文件， ： ！python % 是在vim 执行系统命令， % 代码当前文件名
