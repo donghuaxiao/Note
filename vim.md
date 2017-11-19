@@ -13,10 +13,10 @@ function HeaderPython()
 
 ## 2. Vim map 命令
 - 使用代码缩写， 在插入模式下， 输入 sout , 被替换成 System.out.println();
-```
+```vim
 imap sout System.out.println();
 ```
  - 运行Python 程序
- ```
+ ```vim
  map <F4> :w<CR> :!python %<CR>
  ```
