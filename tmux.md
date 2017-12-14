@@ -35,5 +35,5 @@ c+a + <-: 分屏分割线 <---- 移动
   
   在 ~/.tmux.conf 中添加
 ```
-  set-option -g window-rename off
+  set-option -g allow-rename off
 ```
